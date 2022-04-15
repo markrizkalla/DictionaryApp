@@ -48,7 +48,7 @@ public class PhoneticsAdapter extends RecyclerView.Adapter<PhoneticViewHolder> {
                             .Builder()
                             .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                             .build());
-                    mediaPlayer.setDataSource(context, Uri.parse("http:" + phoneticsList.get(position).getAudio()));
+                    mediaPlayer.setDataSource(phoneticsList.get(position).getAudio());
                     mediaPlayer.prepare();
                     mediaPlayer.start();
 
